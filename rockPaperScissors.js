@@ -16,7 +16,7 @@ function getComputerChoice() {
     }
 }
 
-function roPaSc () {
+function playRound () {
 
     function capitalize(str) {
         let first =  str.charAt(0);
@@ -58,6 +58,27 @@ function roPaSc () {
         return "Please enter a valid choice"
     }
 }
+
+
+
+/*
+function game () {
+    let result = playRound();
+    let score = result.includes("win");
+    return score
+}
+
+
+    get number of times player wins and return it
+    includes("win")
+    get number of times comp  wins and return it
+    includes("lose")
+    when number of rounds reaches 5 check which is higher and return the winner
+   
+    }
+}
+
+*/
 
 
 
