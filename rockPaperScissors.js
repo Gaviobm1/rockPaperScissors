@@ -1,16 +1,17 @@
+
 function getComputerChoice() {
     
-    let randomNumber = Math.floor(Math.random()*10);
+    let randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1)
     
-    if (randomNumber <=3) {
+    if (randomNumber == 1) {
         return "Rock"
     }
    
-    else if (randomNumber > 3 && randomNumber <=6) {
+    else if (randomNumber == 2) {
         return "Paper"
     }
    
-    else  if (randomNumber > 6 && randomNumber<=9) {
+    else  if (randomNumber == 3) {
         return "Scissors"
     }
 }
@@ -104,6 +105,9 @@ else if (i === 4 && n === c) {
 }
 
 }
+
+
+
 
 
    
