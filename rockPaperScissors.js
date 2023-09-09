@@ -1,17 +1,17 @@
 
-function getComputerChoice() {
+
+
+function getComputerChoice(a) {
     
-    let randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1)
-    
-    if (randomNumber == 1) {
+    if (a == 1) {
         return "Rock"
     }
-   
-    else if (randomNumber == 2) {
+
+    else if (a == 2) {
         return "Paper"
     }
    
-    else  if (randomNumber == 3) {
+    else  if (a == 3) {
         return "Scissors"
     }
 }
@@ -59,10 +59,14 @@ function playRound (a, b) {
 let n=0
 let c=0
 
-for (i = 0; i < 5; i++) {
-let userInput = window.prompt("Rock, paper or scissors?")
 
-let compSelection = getComputerChoice();
+
+for (i = 0; i < 5; i++) {
+
+let userInput = window.prompt("Rock, paper or scissors?")
+let randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1)
+let compSelection = getComputerChoice(randomNumber);
+console.log(randomNumber);
 let playSelection = capitalize(userInput);
 playRound(playSelection, compSelection);
 
