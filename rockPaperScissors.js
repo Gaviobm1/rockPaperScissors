@@ -1,6 +1,4 @@
 
-
-
 function getComputerChoice(a) {
      switch (a) {
         case 1:
