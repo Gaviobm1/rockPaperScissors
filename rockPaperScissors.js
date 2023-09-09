@@ -17,11 +17,10 @@ function getComputerChoice(a) {
 }
 
 function capitalize(str) {
-    let first =  str.charAt(0);
-    let cap = first.toUpperCase();
+    let first =  str.charAt(0).toUpperCase();
     let rest = str.slice(1);
     let lower = rest.toLowerCase();
-    return cap + lower;
+    return first + lower;
 }
 
 
@@ -64,9 +63,8 @@ let c=0
 for (i = 0; i < 5; i++) {
 
 let userInput = window.prompt("Rock, paper or scissors?")
-let randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1)
+let randomNumber = ~~(Math.random() * (3 - 1 + 1) + 1)
 let compSelection = getComputerChoice(randomNumber);
-console.log(randomNumber);
 let playSelection = capitalize(userInput);
 playRound(playSelection, compSelection);
 
@@ -78,17 +76,22 @@ if (playRound(playSelection, compSelection).includes("win")) {
         Computer score: ${c}`)
     }
     
-if (playRound(playSelection, compSelection).includes("lose")) {
+else if (playRound(playSelection, compSelection).includes("lose")) {
         c++
         alert (`${playRound(playSelection, compSelection)} \n
         Your score: ${n} \n
         Computer score: ${c}`)
     }
 
-if (playRound(playSelection, compSelection).includes("draw")) {
+else if (playRound(playSelection, compSelection).includes("draw")) {
     alert (`${playRound(playSelection, compSelection)}. \n
     Your score: ${n} \n
     Computer score: ${c}`);
+}
+
+else {
+    alert (`Please enter "Rock", "Paper" or "Scissors"`);
+    i--
 }
 
 if (i === 4 && n > c) {
