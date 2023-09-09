@@ -1,4 +1,3 @@
-
 function getComputerChoice() {
     
     let randomNumber = Math.floor(Math.random()*10);
@@ -16,69 +15,106 @@ function getComputerChoice() {
     }
 }
 
-function playRound () {
-
-    function capitalize(str) {
-        let first =  str.charAt(0);
-        let cap = first.toUpperCase();
-        let rest = str.slice(1);
-        let lower = rest.toLowerCase();
-        return cap + lower;
-    }
-    let compSelec = getComputerChoice();
-    let playSelec = capitalize("PaPEr")
-
-     if (playSelec == "Rock" && compSelec == "Scissors") {
-        return `You win! ${playSelec} beats ${compSelec}!`
-     }
-     else if (playSelec == "Scissors" && compSelec == "Rock") {
-        return `You lose! ${compSelec} beats ${playSelec}!`
-     }
-
-
-    else if (playSelec == "Paper" && compSelec == "Rock") {
-        return `You win! ${playSelec} beats ${compSelec}!`
-     }
-    else if (playSelec =="Rock" && compSelec =="Paper") {
-        return `You lose! ${compSelec} beats ${playSelec}!`
-    }
-
-    else if (playSelec == "Scissors" && compSelec == "Paper") {
-        return `You win! ${playSelec} beats ${compSelec}!`
-    }
-    else if (playSelec == "Paper" && compSelec == "Scissors") {
-        return `You lose! ${compSelec} beats ${playSelec}!`
-    }
-
-    else if (playSelec == compSelec) {
-        return `It's a draw! You both chose ${compSelec}`
-    }
-
-    else {
-        return "Please enter a valid choice"
-    }
+function capitalize(str) {
+    let first =  str.charAt(0);
+    let cap = first.toUpperCase();
+    let rest = str.slice(1);
+    let lower = rest.toLowerCase();
+    return cap + lower;
 }
 
 
+function playRound (a, b) {
 
-/*
-function game () {
-    let result = playRound();
-    let score = result.includes("win");
-    return score
+ 
+    if (a == "Rock" && b == "Scissors") {
+       return `You win! ${a} beats ${b}!`
+    }
+    else if (a == "Scissors" && b == "Rock") {
+       return `You lose! ${b} beats ${a}!`
+    }
+   else if (a == "Paper" && b == "Rock") {
+       return `You win! ${a} beats ${b}!`
+    }
+   else if (a =="Rock" && b =="Paper") {
+       return `You lose! ${b} beats ${a}!`
+   }
+   else if (a == "Scissors" && b == "Paper") {
+       return `You win! ${a} beats ${b}!`
+   }
+   else if (a == "Paper" && b == "Scissors") {
+       return `You lose! ${b} beats ${a}!`
+   }
+   else if (a == b) {
+       return `It's a draw! You both chose ${b}`
+   }
+   else {
+       return "Please enter a valid choice"
+   }
+
 }
 
 
-    get number of times player wins and return it
-    includes("win")
-    get number of times comp  wins and return it
-    includes("lose")
-    when number of rounds reaches 5 check which is higher and return the winner
+let n=0
+let c=0
+
+for (i = 0; i < 5; i++) {
+let userInput = window.prompt("Rock, paper or scissors?")
+
+let compSelection = getComputerChoice();
+let playSelection = capitalize(userInput);
+playRound(playSelection, compSelection);
+
+
+if (playRound(playSelection, compSelection).includes("win")) {
+        n++
+        alert (`${playRound(playSelection, compSelection)} \n
+        Your score: ${n} \n
+        Computer score: ${c}`)
+    }
+    
+if (playRound(playSelection, compSelection).includes("lose")) {
+        c++
+        alert (`${playRound(playSelection, compSelection)} \n
+        Your score: ${n} \n
+        Computer score: ${c}`)
+    }
+
+if (playRound(playSelection, compSelection).includes("draw")) {
+    alert (`${playRound(playSelection, compSelection)}. \n
+    Your score: ${n} \n
+    Computer score: ${c}`);
+}
+
+if (i === 4 && n > c) {
+    alert (`Game over! You win! \n
+    Your score: ${n} \n
+    Computer score: ${c}`)
+}
+else if (i === 4 && n < c) {
+    alert (`Game over! You lose! \n
+    Your score: ${n} \n
+    Computer score: ${c}`)
+}
+
+else if (i === 4 && n === c) {
+    alert (`Game over! It's a draw! \n
+    Your score: ${n} \n
+    Computer score: ${c}`)
+}
+
+}
+
+
    
-    }
-}
 
-*/
+
+
+
+
+
+
+
 
 
 
