@@ -2,18 +2,14 @@
 
 
 function getComputerChoice(a) {
-    
-    if (a == 1) {
-        return "Rock"
-    }
-
-    else if (a == 2) {
-        return "Paper"
-    }
-   
-    else  if (a == 3) {
-        return "Scissors"
-    }
+     switch (a) {
+        case 1:
+            return "Rock"
+        case 2:
+            return "Paper"
+        case 3:
+            return "Scissors" 
+}
 }
 
 function capitalize(str) {
