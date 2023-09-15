@@ -1,25 +1,29 @@
 const container = document.querySelector('#container');
+const buttons = document.createElement('div');
+buttons.classList.add('buttons')
 
 const button1 = document.createElement('button');
-button1.classList.add("btn1");
-button1.style.backgroundColor = 'grey';
+button1.classList.add("btn");
+button1.style.backgroundColor = 'F2C6DE';
 button1.textContent = 'Rock'
 
 const button2 = document.createElement('button');
-button2.classList.add("btn2");
-button2.style.backgroundColor = 'white';
+button2.classList.add("btn");
+button2.style.backgroundColor = '#DBCDF0';
 button2.textContent = 'Paper';
 
 const button3 = document.createElement('button');
-button3.classList.add("btn3");
-button3.style.backgroundColor = 'red';
+button3.classList.add("btn");
+button3.style.backgroundColor = '#FAEDCB';
 button3.textContent = 'Scissors';
 
 const results = document.createElement('div');
-results.style.backgroundColor = 'green';
+results.classList.add("info");
+results.style.backgroundColor = '#C9E4DE';
 
 const scoring = document.createElement('div');
-scoring.style.backgroundColor = 'hotpink';
+scoring.classList.add("info");
+scoring.style.backgroundColor = '#F7D9C4';
 
 
 
@@ -27,6 +31,10 @@ scoring.style.backgroundColor = 'hotpink';
 container.appendChild(button1);
 container.appendChild(button2);
 container.appendChild(button3);
+container.appendChild(buttons);
+buttons.appendChild(button1);
+buttons.appendChild(button2);
+buttons.appendChild(button3);
 container.appendChild(results);
 container.appendChild(scoring);
 
@@ -94,26 +102,6 @@ function playRound (a, b) {
    }
    
 
-  
-
-}
-
-/*function capitalize(str) {
-    let first =  str.charAt(0).toUpperCase();
-    let rest = str.slice(1);
-    let lower = rest.toLowerCase();
-    return first + lower;
-}
-const userInput = document.getElementsByTagName('button');
-let playSelection = userInput
-function getComputerChoice(a) {
-     switch (a) {
-        case 1:
-            return "Rock"
-        case 2:
-            return "Paper"
-        case 3:
-            return "Scissors" 
 }
 
 
@@ -122,57 +110,6 @@ function getComputerChoice(a) {
 
 
 
-
-//for (i = 0; i < 5; i++) {
-
-
-/*playRound(playSelection, compSelection);
-
-
-if (playRound(playSelection, compSelection).includes("win")) {
-        n++
-        alert (`${playRound(playSelection, compSelection)} \n
-        Your score: ${n} \n
-        Computer score: ${c}`)
-    }
-    
-else if (playRound(playSelection, compSelection).includes("lose")) {
-        c++
-        alert (`${playRound(playSelection, compSelection)} \n
-        Your score: ${n} \n
-        Computer score: ${c}`)
-    }
-
-else if (playRound(playSelection, compSelection).includes("draw")) {
-    alert (`${playRound(playSelection, compSelection)}. \n
-    Your score: ${n} \n
-    Computer score: ${c}`);
-}
-
-else {
-    alert (`Please enter "Rock", "Paper" or "Scissors"`);
-    i--
-}
-
-if (i === 4 && n > c) {
-    alert (`Game over! You win! \n
-    Your score: ${n} \n
-    Computer score: ${c}`)
-}
-else if (i === 4 && n < c) {
-    alert (`Game over! You lose! \n
-    Your score: ${n} \n
-    Computer score: ${c}`)
-}
-
-else if (i === 4 && n === c) {
-    alert (`Game over! It's a draw! \n
-    Your score: ${n} \n
-    Computer score: ${c}`)
-}
-
-}
-*/
 
 
 
