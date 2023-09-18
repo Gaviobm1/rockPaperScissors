@@ -4,7 +4,7 @@ buttons.classList.add('buttons')
 
 const button1 = document.createElement('button');
 button1.classList.add("btn");
-button1.style.backgroundColor = 'F2C6DE';
+button1.style.backgroundColor = '#F2C6DE';
 button1.textContent = 'Rock'
 
 const button2 = document.createElement('button');
